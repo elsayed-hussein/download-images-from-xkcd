@@ -1,0 +1,127 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "4eb799d5408e5fdf15e51677f308e360",
+    "packages": [
+        {
+            "name": "imangazaliev/didom",
+            "version": "1.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Imangazaliev/DiDOM.git",
+                "reference": "10c4033d56e599f09183959ed90bf17519b9e38b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Imangazaliev/DiDOM/zipball/10c4033d56e599f09183959ed90bf17519b9e38b",
+                "reference": "10c4033d56e599f09183959ed90bf17519b9e38b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DiDom\\": "src/DiDom/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Imangazaliev Muhammad",
+                    "email": "imangazalievm@gmail.com"
+                }
+            ],
+            "description": "Simple and fast HTML parser",
+            "homepage": "https://github.com/Imangazaliev/DiDOM",
+            "keywords": [
+                "didom",
+                "html",
+                "parser",
+                "xml"
+            ],
+            "support": {
+                "issues": "https://github.com/Imangazaliev/DiDOM/issues",
+                "source": "https://github.com/Imangazaliev/DiDOM/tree/develop"
+            },
+            "time": "2017-12-08T15:20:07+00:00"
+        },
+        {
+            "name": "toolkit/cli-utils",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-toolkit/cli-utils.git",
+                "reference": "74efe710dbeaa29c079eb2e674df547664bbba41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-toolkit/cli-utils/zipball/74efe710dbeaa29c079eb2e674df547664bbba41",
+                "reference": "74efe710dbeaa29c079eb2e674df547664bbba41",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">8.0.0"
+            },
+            "require-dev": {
+                "ext-posix": "*",
+                "ext-readline": "*"
+            },
+            "suggest": {
+                "inhere/console": "a lightweight php console application library.",
+                "toolkit/pflag": "Command line flag parse library of the php"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Toolkit\\Cli\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "inhere",
+                    "email": "in.798@qq.com",
+                    "homepage": "http://github.com/inhere"
+                }
+            ],
+            "description": "useful cli tool library of the php",
+            "homepage": "https://github.com/php-toolkit/cli-utils",
+            "keywords": [
+                "cli",
+                "cli-color",
+                "command-line",
+                "library",
+                "php",
+                "tool"
+            ],
+            "support": {
+                "issues": "https://github.com/php-toolkit/cli-utils/issues",
+                "source": "https://github.com/php-toolkit/cli-utils/tree/v2.0.1"
+            },
+            "time": "2021-12-21T07:31:54+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "theegywolf/download-images-from-xkcd",
+  "type": "project",
+  "require": {
+    "imangazaliev/didom": "^1.13",
+    "toolkit/cli-utils": "^2.0"
+  }
+}
