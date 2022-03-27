@@ -19,7 +19,6 @@ if (isset($_GET["inputFirstNumber"])) {
         $file_name = str_replace("xkcd: ", "", $file_name);
         $file_name = explode(" ", $file_name);
         $file_name = join('-', $file_name);
-
         $is_in = array_search($file_name . '.jpg', $images_in);
         if ($is_in) {
 
