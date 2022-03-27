@@ -46,7 +46,7 @@ use Toolkit\Cli\Color;
     </nav>
     <!-- nav bar end -->
     <!-- input section start  -->
-    <section class=" container my-4 " style="min-height:85vh">
+    <section class=" container my-4 ">
         <form class="row g-3">
             <div class="col row g-3 align-items-center">
                 <div class="col-auto">
@@ -80,9 +80,16 @@ use Toolkit\Cli\Color;
     <!-- input section end  -->
 
     <!-- main section start  -->
-    <section class=" container " style="min-height:85vh">
+    <section class=" container  my-5" style="min-height:85vh">
+        <div class="row g-3 d-flex  justify-content-around">
 
-        <div class="row d-flex justify-content-center">
+            <div class="card col-auto m-2" style="width: 18rem;">
+                <img src="..." class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Image Name :</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                </div>
+            </div>
 
         </div>
     </section>
