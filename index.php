@@ -46,7 +46,7 @@ use Toolkit\Cli\Color;
     </nav>
     <!-- nav bar end -->
     <!-- input section start  -->
-    <section class=" container my-4 ">
+    <section class=" container d-flex  align-items-center justify-content-center " style="min-height:85vh">
         <form class="row g-3">
             <div class="col row g-3 align-items-center">
                 <div class="col-auto">
@@ -80,7 +80,7 @@ use Toolkit\Cli\Color;
     <!-- input section end  -->
 
     <!-- main section start  -->
-    <section class=" container  my-5" style="min-height:85vh">
+    <!-- <section class=" container  my-5" style="min-height:85vh">
         <div class="row g-3 d-flex  justify-content-around">
 
             <div class="card col-auto m-2" style="width: 18rem;">
@@ -92,16 +92,15 @@ use Toolkit\Cli\Color;
             </div>
 
         </div>
-    </section>
+    </section> -->
     <!-- main section end  -->
     <!-- footer start -->
-    <footer class="navbar navbar-dark bg-dark">
-        <div class="container-fluid ">
-            <p class="navbar-brand ms-auto me-auto ">
-                <b>Made by :</b> Elsayed Hussein
-            </p>
-            <a class="btn btn-primary" href="https://github.com/elsayed-hussein/download-images-from-xkcd"><i class="fa-brands fa-github me-1"></i>Git Hub</a>
-        </div>
+    <footer class="navbar navbar-dark bg-dark container-fluid  d-flex  align-items-center justify-content-between">
+        <a class="btn btn-primary" href="/images.php"><i class="fa-brands fa-github me-1"></i>images</a>
+        <p class="navbar-brand ">
+            <b>Made by :</b> Elsayed Hussein
+        </p>
+        <a class="btn btn-primary" href="https://github.com/elsayed-hussein/download-images-from-xkcd"><i class="fa-brands fa-github me-1"></i>Git Hub</a>
     </footer>
     <!-- footer end -->
 
