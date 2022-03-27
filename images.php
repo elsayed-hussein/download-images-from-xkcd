@@ -1,3 +1,28 @@
+<?php
+
+require './vendor/autoload.php';
+
+use DiDom\Document;
+use Toolkit\Cli\Color;
+
+if (isset($_GET["inputFirstNumber"])) {
+
+    $start = $_GET["inputFirstNumber"];
+    $end =  $_GET["inputLastNumber"];
+
+    // for ($i = $start; $i <= $end; $i++) {
+    //     $document = new Document("https://xkcd.com/{$i}/", true);
+    //     $src = $document->find('#comic')[0]->children()[1]->src;
+    //     $file_name = $document->first('head')->first('title')->text();
+    //     $file_name = str_replace("xkcd: ", "", $file_name);
+    //     $file_name = explode(" ", $file_name);
+    //     $file_name = join('-', $file_name);
+    //     file_put_contents("./downloads/{$file_name}.jpg", file_get_contents("https:{$src}"));
+    //     print(Color::apply('green', "🔥🔥 Downloaded {$file_name}\n"));
+    // }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,54 +43,36 @@
     <!-- nav bar start -->
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand ms-auto me-auto" href="#">
+            <a class="navbar-brand ms-auto me-auto" href="./index.php">
                 <h1>xkcd downloads</h1>
         </div>
     </nav>
     <!-- nav bar end -->
-    <!-- input section start  -->
-    <section class=" container d-flex  align-items-center justify-content-center " style="min-height:85vh">
-        <form class="row g-3" action="./images.php" method="GET">
-            <div class="col row g-3 align-items-center">
-                <div class="col-auto">
-                    <label for="inputFirstNumber" class="col-form-label">From Card Number : </label>
-                </div>
-                <div class="col-auto">
-                    <input type="number" name="inputFirstNumber" id="inputFirstNumber" class="form-control" aria-describedby="firstNumberHelpInline" required>
-                </div>
-                <div class="col-auto">
-                    <span id="firstNumberHelpInline" class="form-text">
-                        Must be less than end number.
-                    </span>
+    <!-- main section start  -->
+    <section class=" container  my-5" style="min-height:85vh">
+        <div class="row g-3 d-flex  justify-content-around">
+
+            <div class="card col-auto m-2" style="width: 18rem;">
+                <img src="..." class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Image Name :</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 </div>
             </div>
-            <div class="col row g-3 align-items-center">
-                <div class="col-auto">
-                    <label for="inputLastNumber" class="col-form-label">To Card Number : </label>
-                </div>
-                <div class="col-auto">
-                    <input type="number" name="inputLastNumber" id="inputLastNumber" class="form-control" aria-describedby="lastNumberHelpInline" required>
-                </div>
-                <div class="col-auto">
-                    <span id="lastNumberHelpInline" class="form-text">
-                        Must be more than start number.
-                    </span>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary col m-5">Get </button>
-        </form>
+
+        </div>
     </section>
-    <!-- input section end  -->
+    <!-- main section end  -->
     <!-- footer start -->
     <footer class="navbar navbar-dark bg-dark  d-flex  align-items-center justify-content-between">
-        <a class="btn btn-primary" href="/images.php"><i class="fa-solid fa-images me-1"></i>images</a>
+        <a class="btn btn-primary" href="/index.php"><i class="fa-solid fa-house me-1">
+            </i>main</a>
         <a class="navbar-brand ms-auto me-auto">
             <b>Made by :</b> Elsayed Hussein
         </a>
         <a class="btn btn-primary" href="https://github.com/elsayed-hussein/download-images-from-xkcd"><i class="fa-brands fa-github me-1"></i>Git Hub</a>
     </footer>
     <!-- footer end -->
-
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- font awesome js -->
@@ -73,6 +80,6 @@
 </body>
 
 </html>
-<!-- [x] : convert the above code to work on a website (read the user input using a form). -->
+<!-- [ ] : convert the above code to work on a website (read the user input using a form). -->
 <!-- [ ] : then allow the user to view the downloaded images in a webpage called `images.php`. -->
 <!-- [ ] : add `.copy` to file name if exists . -->
