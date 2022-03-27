@@ -6,6 +6,7 @@ use DiDom\Document;
 use Toolkit\Cli\Color;
 
 $link = __DIR__ . '/downloads';
+$images = scandir($link);
 
 if (isset($_GET["inputFirstNumber"])) {
 
@@ -19,10 +20,15 @@ if (isset($_GET["inputFirstNumber"])) {
         $file_name = str_replace("xkcd: ", "", $file_name);
         $file_name = explode(" ", $file_name);
         $file_name = join('-', $file_name);
-        file_put_contents("./downloads/{$file_name}.jpg", file_get_contents("https:{$src}"));
+        if (file_exists('/downloads' . $file_name)) {
+
+            file_put_contents("./downloads/{$file_name}.copy.jpg", file_get_contents("https:{$src}"));
+        } else {
+
+            file_put_contents("./downloads/{$file_name}.jpg", file_get_contents("https:{$src}"));
+        }
     }
 }
-$images = scandir($link);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +65,7 @@ $images = scandir($link);
                         <img src="<?php echo "./downloads/{$images[$i]}" ?>" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Image Name :</h5>
-                            <h6 class="card-subtitle mb-2 text-muted"><?php echo "{$images[$i]}" ?></h6>
+                            <h6 class="card-subtitle mb-2 text-muted text-wrap"><?php echo "{$images[$i]}" ?></h6>
                         </div>
                     </div>
                 <?php endfor ?>
