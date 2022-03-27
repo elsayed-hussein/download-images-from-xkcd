@@ -6,7 +6,7 @@ use DiDom\Document;
 use Toolkit\Cli\Color;
 
 $link = __DIR__ . '/downloads';
-$images = scandir($link);
+$images_in = scandir($link);
 
 if (isset($_GET["inputFirstNumber"])) {
 
@@ -20,15 +20,19 @@ if (isset($_GET["inputFirstNumber"])) {
         $file_name = str_replace("xkcd: ", "", $file_name);
         $file_name = explode(" ", $file_name);
         $file_name = join('-', $file_name);
-        if (file_exists('/downloads' . $file_name)) {
 
+        $is_in = array_search($file_name, $images_in);
+        if (!$is_in) {
+            echo "done";
             file_put_contents("./downloads/{$file_name}.copy.jpg", file_get_contents("https:{$src}"));
         } else {
 
+            echo "no";
             file_put_contents("./downloads/{$file_name}.jpg", file_get_contents("https:{$src}"));
         }
     }
 }
+$images = scandir($link);
 ?>
 <!DOCTYPE html>
 <html lang="en">
