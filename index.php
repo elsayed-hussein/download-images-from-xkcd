@@ -45,8 +45,43 @@ use Toolkit\Cli\Color;
         </div>
     </nav>
     <!-- nav bar end -->
+    <!-- input section start  -->
+    <section class=" container my-4 " style="min-height:85vh">
+        <form class="row g-3">
+            <div class="col row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputFirstNumber" class="col-form-label">From Card Number : </label>
+                </div>
+                <div class="col-auto">
+                    <input type="number" id="inputFirstNumber" class="form-control" aria-describedby="firstNumberHelpInline">
+                </div>
+                <div class="col-auto">
+                    <span id="firstNumberHelpInline" class="form-text">
+                        Must be less than end number.
+                    </span>
+                </div>
+            </div>
+            <div class="col row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputLastNumber" class="col-form-label">To Card Number : </label>
+                </div>
+                <div class="col-auto">
+                    <input type="number" id="inputLastNumber" class="form-control" aria-describedby="lastNumberHelpInline">
+                </div>
+                <div class="col-auto">
+                    <span id="lastNumberHelpInline" class="form-text">
+                        Must be more than start number.
+                    </span>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary col m-5">Get </button>
+        </form>
+    </section>
+    <!-- input section end  -->
+
     <!-- main section start  -->
     <section class=" container " style="min-height:85vh">
+
         <div class="row d-flex justify-content-center">
 
         </div>
