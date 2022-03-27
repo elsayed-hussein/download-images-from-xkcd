@@ -74,5 +74,5 @@
 
 </html>
 <!-- [x] : convert the above code to work on a website (read the user input using a form). -->
-<!-- [ ] : then allow the user to view the downloaded images in a webpage called `images.php`. -->
+<!-- [x] : then allow the user to view the downloaded images in a webpage called `images.php`. -->
 <!-- [ ] : add `.copy` to file name if exists . -->

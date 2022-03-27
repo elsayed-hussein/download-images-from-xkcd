@@ -5,23 +5,24 @@ require './vendor/autoload.php';
 use DiDom\Document;
 use Toolkit\Cli\Color;
 
+$link = __DIR__ . '/downloads';
+
 if (isset($_GET["inputFirstNumber"])) {
 
     $start = $_GET["inputFirstNumber"];
     $end =  $_GET["inputLastNumber"];
 
-    // for ($i = $start; $i <= $end; $i++) {
-    //     $document = new Document("https://xkcd.com/{$i}/", true);
-    //     $src = $document->find('#comic')[0]->children()[1]->src;
-    //     $file_name = $document->first('head')->first('title')->text();
-    //     $file_name = str_replace("xkcd: ", "", $file_name);
-    //     $file_name = explode(" ", $file_name);
-    //     $file_name = join('-', $file_name);
-    //     file_put_contents("./downloads/{$file_name}.jpg", file_get_contents("https:{$src}"));
-    //     print(Color::apply('green', "🔥🔥 Downloaded {$file_name}\n"));
-    // }
+    for ($i = $start; $i <= $end; $i++) {
+        $document = new Document("https://xkcd.com/{$i}/", true);
+        $src = $document->find('#comic')[0]->children()[1]->src;
+        $file_name = $document->first('head')->first('title')->text();
+        $file_name = str_replace("xkcd: ", "", $file_name);
+        $file_name = explode(" ", $file_name);
+        $file_name = join('-', $file_name);
+        file_put_contents("./downloads/{$file_name}.jpg", file_get_contents("https:{$src}"));
+    }
 }
-
+$images = scandir($link);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,15 +52,18 @@ if (isset($_GET["inputFirstNumber"])) {
     <!-- main section start  -->
     <section class=" container  my-5" style="min-height:85vh">
         <div class="row g-3 d-flex  justify-content-around">
+            <?php if (count($images) > 0) : ?>
+                <?php for ($i = 2; $i < count($images); $i++) : ?>
 
-            <div class="card col-auto m-2" style="width: 18rem;">
-                <img src="..." class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Image Name :</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                </div>
-            </div>
-
+                    <div class="card col-auto m-2" style="width: 18rem;">
+                        <img src="<?php echo "./downloads/{$images[$i]}" ?>" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Image Name :</h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><?php echo "{$images[$i]}" ?></h6>
+                        </div>
+                    </div>
+                <?php endfor ?>
+            <?php endif ?>
         </div>
     </section>
     <!-- main section end  -->
