@@ -3,7 +3,6 @@
 require './vendor/autoload.php';
 
 use DiDom\Document;
-use Toolkit\Cli\Color;
 
 $link = __DIR__ . '/downloads';
 $images_in = scandir($link);
@@ -21,13 +20,13 @@ if (isset($_GET["inputFirstNumber"])) {
         $file_name = explode(" ", $file_name);
         $file_name = join('-', $file_name);
 
-        $is_in = array_search($file_name, $images_in);
-        if (!$is_in) {
-            echo "done";
+        $is_in = array_search($file_name . '.jpg', $images_in);
+        if ($is_in) {
+
             file_put_contents("./downloads/{$file_name}.copy.jpg", file_get_contents("https:{$src}"));
         } else {
 
-            echo "no";
+
             file_put_contents("./downloads/{$file_name}.jpg", file_get_contents("https:{$src}"));
         }
     }
